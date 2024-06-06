@@ -36,7 +36,6 @@ def calc_activation_func():
         print("x must be a number")
         return
     x = float(x)
-    
     act_name = input("Input activation Function (sigmoid|relu|elu): ").lower()
     if act_name == 'sigmoid':
         print(f"{act_name}: f({x}) = {sigmoid(x)}")
@@ -46,5 +45,6 @@ def calc_activation_func():
         print(f"{act_name}: f({x}) = {elu(x)}")
     else:
         print(f"{act_name} is not supported")
-        
+
+
 calc_activation_func()
