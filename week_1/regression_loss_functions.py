@@ -9,10 +9,8 @@ def calc_loss():
         return
     num_samples = int(num_samples) 
     loss_name = input('Input loss name: ')
-    
     predict = [random.uniform(0, 10) for _ in range(num_samples)]
     target = [random.uniform(0, 10) for _ in range(num_samples)]
-    
     if loss_name == 'MAE':
         loss = [abs(y - y_hat) for y, y_hat in zip(target, predict)]
         final_loss = sum(loss)/num_samples
@@ -25,7 +23,6 @@ def calc_loss():
     else:
         print('Invalid loss name')
         return
-    
     for i in range(num_samples):
         print(f'loss name : {loss_name}, sample : {i}, pred : {predict[i]}, target : {target[i]}, loss : {loss[i]}')
     print(f'final {loss_name}: {final_loss}')
