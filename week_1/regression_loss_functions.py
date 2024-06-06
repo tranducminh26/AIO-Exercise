@@ -6,7 +6,7 @@ def calc_loss():
     num_samples = input('Input number of samples (interger number) which are generated: ')
     if not num_samples.isnumeric():
         print('number of samples must be an interger number')
-        return
+        return     
     num_samples = int(num_samples) 
     loss_name = input('Input loss name: ')
     predict = [random.uniform(0, 10) for _ in range(num_samples)]
