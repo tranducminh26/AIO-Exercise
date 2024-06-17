@@ -2,13 +2,12 @@
 
 def max_kernel(list, k):
     result = []
-    length = len(list)
-    for i in range(length - k + 1):
-        max = list[i]
-        for j in range(i + 1, i + k):
-            if max < list[j]:
-                max = list[j]
-        result.append(max)
+    sub_list = []
+    for element in list:
+        sub_list.append(element)
+        if len(sub_list) == k:
+            result.append(max(sub_list))
+            del sub_list[0]
     return result       
 
 
